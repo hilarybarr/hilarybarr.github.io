@@ -228,9 +228,9 @@ footer {
 
 @media screen and (max-width: 800px) {
 
-	.wrap{
-		width:100%;
-	}
+.wrap{
+	width:100%;
+ }
 	
 }
 
@@ -238,9 +238,9 @@ footer {
 
 @media screen and (max-width: 607px) {
 
-	.grid{
-height: 280px;
-	}
+.grid{
+	height: 280px;
+ }
 	
 }
 
@@ -254,13 +254,12 @@ article{
 }
 
 .grid{
-float: none;
-margin: auto;
-border-top:none;
-padding: 2%;
-height: auto;
-}
-
+	float: none;
+	margin: auto;
+	border-top:none;
+	padding: 2%;
+	height: auto;
+ }
 
 .tech{
 	float: none;
@@ -275,7 +274,7 @@ height: auto;
 }
 
 footer .button{
-		display: none;
+  display: none;
 }
 
 	
