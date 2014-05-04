@@ -100,7 +100,7 @@ nav ul li a:hover{
 .grid{
     float: left;
     text-align: center;
-    height: 180px;
+    height: 300px;
     margin-left: 3%;
 	padding: 1.5em 0;
 	border-top: 5px solid #026660;
@@ -131,6 +131,7 @@ nav ul li a:hover{
 	font-size: 0.875em;
 	text-transform: uppercase;
 	padding: 0.8em;
+	margin-top: 2%;
 	border: 1px solid #EEE;
 	display: inline-block;
 	background:#026660;
