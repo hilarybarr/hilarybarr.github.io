@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheets/blogtemplate.css"/>
+		<title>Hilary's Dev Bootcamp Blog</title>
+
+	</head>
+	<body>
+		<div id="header">
+			<h1> Hilary's Dev Bootcamp Blog </h1>
+		</div>
+<!--The content section is where articles are placed -->
+		<div id="content">
+			<div class="article" id="article1">
+				<h2> Inject...And Not the Needle Kind </h2>
+				<h3> May 16, 2014 by Hilary </h3>
+			
+ 	
+ 		
+ 		This week I learned about an awesome Ruby method. So awesome that I have to share it. That method is Enumerable#inject. When I first started learning Ruby, I did a bunch of exercises that involved writing loops and .each iterators to add every element in an array together, then return the sum of all the elements. This required a large block of code. Here is an example of how such code looked using a while loop.
+
+ 		</br><img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-16at42459PM_zpsb0dbc8f2.png"/>
+
+ 		</br>
+ 		Here is an example of how such code would look using an each iterator.
+
+ 		</br><img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-16at42452PM_zps8a277a99.png"/>
+
+
+ 		</br>
+ 		And then, I discovered inject, which makes it possible to do this using just ONE LINE OF CODE! Inject is a method in the Enumerable module, which is a set of methods to traverse, search through and manipulate collections. The inject method takes a collection and reduces it to a single value, such as a sum, product, or difference of values. You can even use inject to find the longest string in an array or to convert an array into a hash. Synonyms for inject include reduce, fold, accumulate, and compress.
+
+ 		</br></br>
+ 		What's happening in the code below is inject is storing values in a block variable called memo, then returning the total that is in memo. You can call memo anything you'd like, but it is common practice to call it memo. Note the argument passed to inject is the initial value.
+
+		</br><img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-16at42509PM_zps0bcd4894.png"/>
+
+
+
+
+
+           		<img src= "http://www.hallerandhug.com/wp-content/uploads/2013/11/line-divider.png"/>
+			</div>
+<!--Place other articles here by copying the div article class and add the title to the archives -->
+		</div>
+<!-- The sidebar section on the right includes About Me and Archives -->
+		<div id="sidebar">
+        	<div id="aboutme">
+        		<h3> About Me </h3>
+        		<img src="http://user.photos.s3.amazonaws.com/user_13469.jpg" id="mypic"/>
+        		<p> My name is Hilary Barr. I am currently studying software engineering at Dev Bootcamp and am loving it! </p>
+            	<a href="mailto:hilaryrosebarr@gmail.com">Contact Me </a>
+			</div>
+        	</br>
+			<div id="archives">
+				<ul><strong> Archives </strong>
+					<li><a href="#article1"> Article1 </a></li>
+                	<li><a href="#article2"> Article2</a></li>
+                 	<li><a href="#article3"> Article3</a></li>
+        	     </ul>
+			</div>
+		</div>
+<!--The footer includes links -->
+		<div id="footer">
+			<a href="https://hilarybarr.github.io/index.html" class="standard gray">Home</a>
+			<a href="http://www.devbootcamp.com" class="standard gray">Dev Bootcamp</a>
+			<a href="mailto:hilaryrosebarr@gmail.com" class="standard gray">Contact Me</a>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
