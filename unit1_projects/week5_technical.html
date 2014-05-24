@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheets/blogtemplate.css"/>
+		<title>Hilary's Dev Bootcamp Blog</title>
+
+	</head>
+	<body>
+		<div id="header">
+			<h1> Hilary's Dev Bootcamp Blog </h1>
+		</div>
+<!--The content section is where articles are placed -->
+		<div id="content">
+			<div class="article" id="article1">
+				<h2> Now That's Classy </h2>
+				<h3> May 22, 2014 by Hilary </h3>
+			<p>
+ 	
+ 		
+ 		Ruby is an object-oriented language, meaning it uses classes and objects to represent concepts. Classes are template for objects. They include a collection of variables representing internal state and methods that operate on that state. Some built-in classes include String, Integer, Time, Array, and Range. Objects are single instances of a class. For example, "I am a string" is an object of the String class. If you write "I am a string"..upcase, you are calling the upcase method that is defined in the String class.
+
+ 		</br></br>Let's look at a more complex example, where we will create a Family class that defines properties and methods that all families have in common. 
+
+
+
+ 	<img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-22at72903PM_zps4d90a3fc.png"/>
+
+ 		
+ 		
+ 	</br>
+ 	<strong>Instance Variables:</strong>  The @ symbol in front of our features (last_name, address) indicate that they are instance variables. Instance variables, which are an object's variables, last as long as an object does and can be called by any instance method of the object, not just the method it is defined in. Conversely, variables with a local scope (those without a symbol in front of them) only interact with the method they are defined in. We can also have a class variable, indicated by two @@ symbols, which are available to any instance of a class. If we called Family.describe, the string "Family is important" would be outputted. There are also global variables, indicated by a $ symbol, which are available anywhere in a program. Global variables are not common.
+
+ 	</br></br>
+ 	<strong>Attribute accesor:</strong> Because instance variables are only accessible to instance methods and not the outside world, we have to define reader and writer methods, or getters and setters, to expose an object's instance variables and let a user set them outside the class definition. To do this, we write attr_reader, attr_writer, or attr_accessor, followed by the instance variable names as symbols preceded by a colon, at the top of a class definition. 
+
+
+</br></br>
+ 	Now that we've touched on instance variables and getters and setters, let's go back to our example and create a Johnson_Family object with its last_name and address specified in the parameters:
+
+ </br></br>
+
+<img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-22at72908PM_zpsd8605a82.png"/>
+
+</br></br>
+
+	Because introduce is a method defined in the Family class, we can call it on Johnson_Family like this: Johnson_Family.introduce. This would output "We are the Johnson family".
+
+ 	</br></br>
+ 	<strong>Inheritance:</strong>
+ 	What if we wanted Johnson_Family to have certain features that other families don't have? For example, let's say Johnson_Family is a military family and we want to specify what base they live on. We don't want military_base to be a feature of all Family objects, but we want it to be a feature of some. We could create a new subclass, Military_Family, which inherits all the properties of the parent class Family but which also has features of its own. Then, when we create a new instance of Military_Family, the object will have not only a military_base feature but also a last_name and address. 
+
+ 	 </br></br>
+ 	 Using the "<" symbol below lets Military_Family inherit all the properties of the Family class. Super indicates that we are asking the parent of the current object to invoke a method of the same name. Note that a class can only inherit from a single class at a time (i.e. it can inherit from a class that inherited from a class that inherited from a class, but not from multiple classes at once).
+
+ 	</br>
+<img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-22at72913PM_zps20b7729d.png">
+
+ 	</br></br>
+ 	We would then instantiate Johnson_Family like this: 
+
+ <img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-22at72920PM_zps570eea69.png"/>
+ 
+
+</br></br> Now you know the basics of classes and objects in Ruby. For further exploration, check out modules, mixins, and private/public/protected methods. Goodbye for now..."class" is no longer in session.
+</p>
+
+
+           		<img src= "http://www.hallerandhug.com/wp-content/uploads/2013/11/line-divider.png"/>
+			</div>
+<!--Place other articles here by copying the div article class and add the title to the archives -->
+		</div>
+<!-- The sidebar section on the right includes About Me and Archives -->
+		<div id="sidebar">
+        	<div id="aboutme">
+        		<h3> About Me </h3>
+        		<img src="http://user.photos.s3.amazonaws.com/user_13469.jpg" id="mypic"/>
+        		<p> My name is Hilary Barr. I am currently studying software engineering at Dev Bootcamp and am loving it! </p>
+            	<a href="mailto:hilaryrosebarr@gmail.com">Contact Me </a>
+			</div>
+        	</br>
+			<div id="archives">
+				<ul><strong> Archives </strong>
+					<li><a href="#article1"> Article1 </a></li>
+                	<li><a href="#article2"> Article2</a></li>
+                 	<li><a href="#article3"> Article3</a></li>
+        	     </ul>
+			</div>
+		</div>
+<!--The footer includes links -->
+		<div id="footer">
+			<a href="https://hilarybarr.github.io/index.html" class="standard gray">Home</a>
+			<a href="http://www.devbootcamp.com" class="standard gray">Dev Bootcamp</a>
+			<a href="mailto:hilaryrosebarr@gmail.com" class="standard gray">Contact Me</a>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
