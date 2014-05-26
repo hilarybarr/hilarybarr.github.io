@@ -6,7 +6,7 @@ body{
 }
 /*----wrap, clear-----*/
 .wrap{
-	width:80%;
+	width:85%;
 	margin:0 auto;
 }
 
@@ -100,7 +100,7 @@ nav ul li a:hover{
 .grid{
     float: left;
     text-align: center;
-    height: 500px;
+    height: 220px;
     margin-left: 3%;
 	padding: 1.5em 0;
 	border-top: 5px solid #026660;
