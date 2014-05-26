@@ -34,7 +34,7 @@ $message
 mail($myemail, $subject, $message);
 
 /* Redirect visitor to the thank you page */
-header('Location: https://www.google.com');
+header('Location: http://www.google.com');
 exit();
 
 /* Functions we used */
