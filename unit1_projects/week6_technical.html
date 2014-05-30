@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheets/blogtemplate.css"/>
+		<meta charset="UTF-8">
+		<title>Hilary's Dev Bootcamp Blog</title>
+
+	</head>
+	<body>
+		<div id="header">
+			<h1> Hilary's Dev Bootcamp Blog </h1>
+		</div>
+<!--The content section is where articles are placed -->
+		<div id="content">
+			<div class="article" id="article1">
+				<h2> Blocs, Procs, and Lambdas...oh my! </h2>
+				<h3> May 29, 2014 by Hilary </h3>
+		<p> 
+	
+			</br>
+			<em> Blocks </em>
+
+			</br></br>
+			Blocks are bits of code that can be executed and can be defined with either the keywords do and end or with {}. We have worked a lot with blocks so far in Dev Bootcamp because many methods take a block. For example, in array.each {|x| x*2}, anything in the curly brackets is a block that is passed to the method. Unlike a method, though, the block we define will only be called once and in the context of the array we are iterating over. The block appears just long enough to do something for "each", then disappears. 
+
+			</br></br>
+			It is also possible to transfer control from a calling method to a block and back again using the yield keyword. Here is an example of what that would look like. When the block_test method is called, yield outputs anything that is inside the curly brackets.
+
+
+			</br><img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-29at101312PM_zps3ab7bab2.png"/>
+
+			</br>
+			It is important to realize that blocks are one of very few things in Ruby that are not objects. Let me say that again: blocks are NOT objects. What if we wanted to save a block as an object? That's where procs and lambdas come in. 
+
+
+			</br></br></br>
+			<em> Procs </em>
+
+
+			</br></br>
+			A proc is an object that stores a block so that you can call it whenever you'd like without having to rewrite it. It is similar to a method, yet it isn't bound to an object since it IS an object itself. You can output the result of a proc with the .call method or pass a proc to a method. Procs often look similar to methods. 
+
+
+			</br></br>Here is an example of calling a proc with .call:
+
+
+			</br>
+			<img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-29at101659PM_zpsbad143d0.png"/>
+
+
+			</br></br>Here is an example of passing a proc to a method:
+
+
+			</br><img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-29at101740PM_zps8362d71c.png"/>
+
+
+
+			</br></br></br>
+			<em> Lambda </em>
+
+			</br></br>Lambdas, which are like nameless methods, are similar to procs. lambda{puts "hello"} is the same as Proc.new {puts "hello"}.Unlike procs, lambdas check the number of arguments passed to it and will throw an error if you pass it the wrong number of arguments. Also, when a lambda returns, it passes control back to the calling method, while a proc returns immediately.
+
+
+			</br></br></br>
+			<em> Further Reading </em>
+			</br></br>The Codecademy lesson on blocks, procs, and lambdas is very helpful, so if you want to learn more, I would suggest going through it <a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/0/1"/> here </a>. 
+
+
+ 		</p>
+ 		
+ 		
+
+           		<img src= "http://www.hallerandhug.com/wp-content/uploads/2013/11/line-divider.png"/>
+			</div>
+<!--Place other articles here by copying the div article class and add the title to the archives -->
+		</div>
+<!-- The sidebar section on the right includes About Me and Archives -->
+		<div id="sidebar">
+        	<div id="aboutme">
+        		<h3> About Me </h3>
+        		<img src="http://user.photos.s3.amazonaws.com/user_13469.jpg" id="mypic"/>
+        		<p> My name is Hilary Barr. I am currently studying software engineering at Dev Bootcamp and am loving it! </p>
+            	<a href="mailto:hilaryrosebarr@gmail.com">Contact Me </a>
+			</div>
+        	</br>
+		<div id="archives">
+		<ul><strong> Archives </strong>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week1_technical_blog.html">Week 1 Technical Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week1_cultural_blog.html">Week 1 Cultural Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week2_technical.html">Week 2 Technical Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week3_technical.html">Week 3 Technical Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week3_cultural.html">Week 3 Cultural Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week4_technical.html">Week 4 Technical Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week4_cultural.html">Week 4 Cultural Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week5_technical.html">Week 5 Technical Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week5_cultural.html">Week 5 Cultural Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week5_cultural.html">Week 6 Technical Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week6_cultural.html">Week 6 Cultural Blog</a></li>
+         </ul>
+     </div>
+		</div>
+<!--The footer includes links -->
+		<div id="footer">
+			<a href="https://hilarybarr.github.io/index.html" class="standard gray">Home</a>
+			<a href="http://www.devbootcamp.com" class="standard gray">Dev Bootcamp</a>
+			<a href="mailto:hilaryrosebarr@gmail.com" class="standard gray">Contact Me</a>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
