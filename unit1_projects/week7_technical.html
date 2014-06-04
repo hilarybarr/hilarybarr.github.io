@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheets/blogtemplate.css"/>
+		<meta charset="UTF-8">
+		<title>Hilary's Dev Bootcamp Blog</title>
+
+	</head>
+	<body>
+		<div id="header">
+			<h1> Hilary's Dev Bootcamp Blog </h1>
+		</div>
+<!--The content section is where articles are placed -->
+		<div id="content">
+			<div class="article" id="article1">
+				<h2> SQL Inject, And How to Protect </h2>
+				<h3> June 3, 2014 by Hilary </h3>
+		<p> 
+	
+</br> Structured Query Language (SQL) is a language that allows users and web applications to interact with a database. Any time a user enters input, such as a name or password, a SQL command is enacted which enters the input into a database or matches the input to stored data. A technique called SQL injection makes it frighteningly easy for hackers to exploit SQL commands so that they can infiltrate databases.
+
+
+</br> </br> Before addressing how SQL injection occurs, it is important to explain the role of SQL in properly functioning web applications. Certain SQL queries are executed whenever a legitimate function is triggered. For example, let's say that a returning user named John Smith enters his username and password. The web page would send the following SQL command to the database when John hits send. The SQL command would then match the username and password against the stored combination:
+
+
+</br> </br> <strong> SELECT id
+</br> FROM logins
+</br> WHERE username=’JohnSmith’
+</br> AND password=’1234”;</strong>
+
+</br> </br> But what if the web page isn't properly coded to protect against SQL attacks? A hacker may  inject additional SQL commands to retrieve stored values. This is made possible because the fields available for user input permit SQL commands to pass through and query the database directly. 
+
+</br> </br> For example, if a SQL injecter typed the following on an improperly coded webpage, they would be logged into the account because the OR clause is true:
+
+</br></br><strong>  SELECT id
+</br> FROM logins
+</br> WHERE username='’JohnSmith’'
+</br> AND password='password' OR 'x'='x';</strong>
+
+
+</br> </br>  One of the most common ways that hackers discover vulnerable web pages is through Google dorks, which are search queries that finds websites meeting the parameters of the advanced query you input. Examples of dorks you can use to find vulnerable sites include inurl:pageid=, inurl:staff_id=, etc.  After going to one of the sites that appear in the search, a hacker would then enter an apostrophe at the end of the URL. If the page returs a SQL error, it is vulnerable. A hacker would determine the amount of columns and rows by entering a URL along the lines of: website/index.php?catid=1 order by 1. They would then increase the numbers one by one until they arrive at an error. 
+
+
+</br></br>  SQL injection attacks like this have become popular since all an attacker needs is a web browser, an understanding of SQL, and the ability to guess the name of fields. Apps like Havij have even been developed to facilitate SQL injection attacks. Because of the ease with which SQL injections occur, the Web Application Security Consortium reported that 9% of total hacking incidents in 2006 were due to this technique. This is terrifying. Credit card information, passwords to personal accounts, and other important data are readily available to SQL injecters on web pages that are not properly coded. Security firm Acunetix estimates that 50% of the web pages it tested faced such a risk. In fact, Yahoo, LinkedIn, PBS, the CIA, and Sony Pictures have all been victims of SQL injection.
+
+
+
+
+</br> </br> Now that we have addressed how SQL injection works, let's consider how an organization can protect against SQL injection. Firewalls and similar mechanisms alone aren't sufficient. Automated web vulnerability scanners crawl a website and check for SQL injection vulnerabilities. They will specify which scripts are vulnerable so you can fix the code. Dynamic scripting languages like ASP, .NET, PHP and CGI are especially at risk. A database could also be set to restrict to certain commands only. User input must be filtered as well. For example, only email addresses that include @ should pass. These precautionary measures are essential. Otherwise, your credit card number could be in someone else's hands.
+
+
+
+
+
+
+
+ 		</p>
+ 		
+ 		
+
+           		<img src= "http://www.hallerandhug.com/wp-content/uploads/2013/11/line-divider.png"/>
+			</div>
+<!--Place other articles here by copying the div article class and add the title to the archives -->
+		</div>
+<!-- The sidebar section on the right includes About Me and Archives -->
+		<div id="sidebar">
+        	<div id="aboutme">
+        		<h3> About Me </h3>
+        		<img src="http://user.photos.s3.amazonaws.com/user_13469.jpg" id="mypic"/>
+        		<p> My name is Hilary Barr. I am currently studying software engineering at Dev Bootcamp and am loving it! </p>
+            	<a href="mailto:hilaryrosebarr@gmail.com">Contact Me </a>
+			</div>
+        	</br>
+		<div id="archives">
+		<ul><strong> Archives </strong>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week1_technical_blog.html">Week 1 Technical Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week1_cultural_blog.html">Week 1 Cultural Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week2_technical.html">Week 2 Technical Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week3_technical.html">Week 3 Technical Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week3_cultural.html">Week 3 Cultural Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week4_technical.html">Week 4 Technical Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week4_cultural.html">Week 4 Cultural Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week5_technical.html">Week 5 Technical Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week5_cultural.html">Week 5 Cultural Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week5_cultural.html">Week 6 Technical Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week6_cultural.html">Week 6 Cultural Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week7_cultural.html">Week 7 Cultural Blog</a></li>
+					<li><a href="https://hilarybarr.github.io/unit1_projects/week7_technical.html">Week 7 Technical Blog</a></li>
+         </ul>
+     </div>
+		</div>
+<!--The footer includes links -->
+		<div id="footer">
+			<a href="https://hilarybarr.github.io/index.html" class="standard gray">Home</a>
+			<a href="http://www.devbootcamp.com" class="standard gray">Dev Bootcamp</a>
+			<a href="mailto:hilaryrosebarr@gmail.com" class="standard gray">Contact Me</a>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
