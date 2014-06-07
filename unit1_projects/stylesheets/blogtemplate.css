@@ -125,3 +125,12 @@ a.standard {
 
 
  .standard:hover { color: #fff; opacity: .5 }
+
+
+
+
+ @media screen and (max-width: 1030px) {
+ 	#header {
+ 		font-size: 10%;
+ 	}
+ }
