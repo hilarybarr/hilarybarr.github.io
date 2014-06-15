@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Now That's Classy &mdash; Hilary Barr</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.png"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Hilary Barr" />
+    <meta name="title" content="Now That's Classy ">
+    <link rel="canonical" href="http://incorporated.sendtoinc.com/2014/05/22/technical5/">
+     
+    <link rel="author" href="https://plus.google.com/100687498195339762535">       
+    <meta property="og:title" content="Now That's Classy "/>
+    <meta property="og:url" content="http://incorporated.sendtoinc.com/2014/05/22/technical5/"/>
+    
+    <meta property="og:image" content="http://incorporated.sendtoinc.com/images/blog-cover.jpg"/>
+    
+    <meta property="og:image" content="http://incorporated.sendtoinc.com/images/logo.png"/>   
+    
+    
+    <meta property="og:description" content="An exploration of Ruby classes and object orientation."/>
+    <meta name="description" content="An exploration of Ruby classes and object orientation."/>
+    
+    <meta property="og:site_name" content="Hilary Barr">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+        
+            <a href="/" class="home">Home</a>
+            <a href="http://github.com/hilarybarr">Github</a>
+            <a href="https://hilarybarr.github.io">About</a>
+            <a href="mailto:hilaryrosebarr@gmail.com">Contact </a>
+        </nav>
+        
+    </header>
+</section>
+
+<!--
+<div class="article-cover">
+    <div>
+        <img src="/images/blog-cover.jpg" class="image">
+    </div>
+</div>
+
+-->
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="Hilary Barr" target="_blank">Hilary Barr</a></address> &mdash;
+                <time pubdate datetime="2014-22-May" title="May 22, 2014">May 22, 2014</time>
+            </div>
+            <h1 class="title">Now That's Classy</h1>
+            <h2 class="subtitle">Technical Blog Post 5</h2>
+        </header>
+
+        <section>
+            <p>Ruby is an object-oriented language, meaning it uses classes and objects to represent concepts. Classes are template for objects. They include a collection of variables representing internal state and methods that operate on that state. Some built-in classes include String, Integer, Time, Array, and Range. Objects are single instances of a class. For example, “I am a string” is an object of the String class. If you write “I am a string”..upcase, you are calling the upcase method that is defined in the String class.</p>
+
+<p>Let’s look at a more complex example, where we will create a Family class that defines properties and methods that all families have in common. </p>
+
+<p><img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-22at72903PM_zps4d90a3fc.png" /></p>
+
+<h4 id="instance-variables">Instance Variables:</h4>
+<p>The @ symbol in front of our features (last_name, address) indicate that they are instance variables. Instance variables, which are an object’s variables, last as long as an object does and can be called by any instance method of the object, not just the method it is defined in. Conversely, variables with a local scope (those without a symbol in front of them) only interact with the method they are defined in. We can also have a class variable, indicated by two @@ symbols, which are available to any instance of a class. If we called Family.describe, the string “Family is important” would be outputted. There are also global variables, indicated by a $ symbol, which are available anywhere in a program. Global variables are not common.</p>
+
+<h4 id="attribute-accesor">Attribute accesor:</h4>
+<p>Because instance variables are only accessible to instance methods and not the outside world, we have to define reader and writer methods, or getters and setters, to expose an object’s instance variables and let a user set them outside the class definition. To do this, we write attr_reader, attr_writer, or attr_accessor, followed by the instance variable names as symbols preceded by a colon, at the top of a class definition. </p>
+
+<p>Now that we’ve touched on instance variables and getters and setters, let’s go back to our example and create a Johnson_Family object with its last_name and address specified in the parameters:</p>
+
+<p><img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-22at72908PM_zpsd8605a82.png" /></p>
+
+<p>Because introduce is a method defined in the Family class, we can call it on Johnson_Family like this: Johnson_Family.introduce. This would output “We are the Johnson family”.</p>
+
+<h4 id="inheritance">Inheritance:</h4>
+<p>What if we wanted Johnson_Family to have certain features that other families don’t have? For example, let’s say Johnson_Family is a military family and we want to specify what base they live on. We don’t want military_base to be a feature of all Family objects, but we want it to be a feature of some. We could create a new subclass, Military_Family, which inherits all the properties of the parent class Family but which also has features of its own. Then, when we create a new instance of Military_Family, the object will have not only a military_base feature but also a last_name and address. </p>
+
+<p>Using the “&lt;” symbol below lets Military_Family inherit all the properties of the Family class. Super indicates that we are asking the parent of the current object to invoke a method of the same name. Note that a class can only inherit from a single class at a time (i.e. it can inherit from a class that inherited from a class that inherited from a class, but not from multiple classes at once).</p>
+
+<p><img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-22at72913PM_zps20b7729d.png" /></p>
+
+<p>We would then instantiate Johnson_Family like this: </p>
+
+<p><img src="http://i1371.photobucket.com/albums/ag309/hilaryrose/ScreenShot2014-05-22at72920PM_zps570eea69.png" /></p>
+
+<p>Now you know the basics of classes and objects in Ruby. For further exploration, check out modules, mixins, and private/public/protected methods. Goodbye for now…“class” is no longer in session.</p>
+
+
+            
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/ks.png">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/hilaryrose1218" title="" target="_blank">Hilary Barr</a></strong><br>
+                <span class="muted">Software Engineering Student</span>
+                </p>
+            </address>
+
+        </footer>
+
+        
+        <section>
+                <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'hilarybarr'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+   
+
+        </section>
+        
+    </div>
+</article>
+
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+    
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/hilaryrose1218" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/hilary.barr.50" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+              
+            <a href="/" title="Blog">
+            <i class="icon icon-rss black"></i>  
+        </nav>
+      
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,236 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: base
 
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Hilary Barr Dev Bootcamp</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="myindex/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="myindex/css/freelancer.css" rel="stylesheet" type="text/css">
-
-    <!-- Fonts -->
-    <link href="myindex/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-    <!-- IE8 support for HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top" class="index">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+---
+<div class="blog-cover" style="background-image:url(/images/{{ site.inc.cover_image }});">
+    
+    <section>
         <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top"></a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!--Header-->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive img-circle" src="myindex/img/me2.png" height="50px" width="180px" alt="">
-                    <div class="intro-text">
-                        <span class="name">Hilary Barr</span>
-                        <hr class="star-light">
-                        <span class="byline">Software Engineering Portfolio</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!--Portfolio-->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-       
-
-            
-            </br>
-             <div class="row">
-                <div class="col-md-4 text-center">
-                    <h2 align="center">Technical Blog</h2>
-                    <i class="fa fa-rss-square fa-4x"></i>
-                    <p><a class="btn btn-default" href="https://hilarybarr.github.io/unit1_projects/week1_technical_blog.html" role="button">Click Here &raquo;</a></p>
-                </div>
-                <div class="col-md-4 text-center">
-                     <h2 align="center">Github Repo</h2>
-                     <i class="fa fa-github fa-4x"></i>
-                    <p><a class="btn btn-default" href="https://github.com/hilarybarr" role="button">Click Here &raquo;</a></p>
-                </div>
-                <div class="col-md-4 text-center  ">
-                    <h2 align="center">Cultural Blog</h2>
-                    <i class="fa fa-rss-square fa-4x"></i>
-                    <p><a class="btn btn-default" href="https://hilarybarr.github.io/unit1_projects/week1_cultural_blog.html" role="button">Click Here &raquo;</a></p>
-                </div>
-           </div>
-       </div>
-    </section>
-
-    <!--About-->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-lg-offset-3 text-center">
-                    <p>My name is Hilary Barr. I am thrilled to be learning web design and am excited to keep improving this page as I learn more techniques. I am currently studying HTML5, CSS, JavaScript, and Ruby on Rails.</p>
-                </div>
-            </div>
-             
+            <h1>Hilary Barr's Software Engineering Blog</h1>
+        
         </div>
     </section>
+</div>
 
-<!--Contact-->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
-                    <hr class="star-primary">
-                </div>
+
+
+<article class="container">
+{% for post in paginator.posts %}
+  {% unless post.draft %}
+    <section class="index">
+        <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %}-->
+        <div>
+            <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
+            <p>{{ post.excerpt }}</p>
+            <div class="meta">
+                Written By <address>{{ post.author.name }}</address> &mdash;
+                <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%B %d, %Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
             </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-            <div class="panel panel-default" style="margin:0 auto;width:500px">
-                    <div class="panel-body">
-                        <form name="contactform" method="post" action="mailto:hilaryrosebarr@gmail.com" class="form-horizontal" role="form">
-                            <div class="form-group">
-                                <label for="inputName" class="col-lg-2 control-label">Name</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail1" class="col-lg-2 control-label">Email</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputSubject" class="col-lg-2 control-label">Subject</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputPassword1" class="col-lg-2 control-label">Message</label>
-                                <div class="col-lg-10">
-                                    <textarea class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..."></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-lg-offset-2 col-lg-10">
-                                    <button type="submit" class="btn btn-default">
-                                        Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                </div>
-            </div>
+            <a href="{{ post.url }}" rel="prefetch" class="btn btn-outline btn-sm" >View Post </a>
         </div>
+        <hr>
     </section>
-
-    <!--Footer-->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                   
-                    </div>
-                    <div class="footer-col col-md-12">
-                    
-                        <ul class="list-inline">
-                            <li><a href="https://www.facebook.com/hilary.barr.50" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li><a href="https://plus.google.com/u/0/114525051570324707615/posts" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            </li>
-                            <li><a href="http://www.linkedin.com/pub/hilary-barr/2b/423/a15" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; 2014 - Hilary Barr
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div class="scroll-top page-scroll visible-xs visble-sm visible-lg visible-md">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
-
-
-    <script src="myindex/js/jquery-1.10.2.js"></script>
-    <script src="myindex/js/bootstrap.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="myindex/js/classie.js"></script>
-    <script src="myindex/js/cbpAnimatedHeader.js"></script>
-    <script src="myindex/js/freelancer.js"></script>
-
-</body>
-
-</html>
-
+    {% endunless %}
+    {% endfor %}
+    <section class="pagination" style="text-align:center">
+      {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+        <a href="/" class="btn btn-outline">‹ Newer</a>
+        {% else %}
+        <a href="/page{{ paginator.previous_page }}" class="btn btn-outline">‹ NEWER</a>
+        {% endif %}
+      {% endif %}
+      {% if paginator.next_page %}
+        <a href="/page{{ paginator.next_page }}" class="btn btn-outline">OLDER ›</a>
+      {% endif %}
+    </section>
+</article>
