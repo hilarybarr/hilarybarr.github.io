@@ -59,7 +59,7 @@ highlighter:  true
 relative_permalinks: true
 
 permalink:     pretty
-paginate_path: "page:num"
+paginate_path: "blog/page:num"
 paginate: 5
 
 markdown:      kramdown
