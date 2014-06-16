@@ -4417,6 +4417,7 @@ a.list-group-item.active > .badge,
   margin-right: auto;
   margin-left: auto;
   display: inline-block;
+  float: none;
 
 }
 a.thumbnail:hover,
