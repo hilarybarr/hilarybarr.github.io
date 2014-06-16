@@ -12,7 +12,7 @@ layout: base
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3 text-center">
                    </br></br> <p>My name is Hilary Barr. I am thrilled to be learning web design and am excited to keep improving this page as I learn more techniques. I am currently studying HTML5, CSS, JavaScript, SQL, and Ruby on Rails.
-            <img class="img-responsive img-circle" src="myindex/img/me2.png" height="50px" width="180px" alt="">
+           {% if page.author.image %}<img src="/images/{{ page.author.image }}">{% endif %}
           </div>
         </div>
              
