@@ -4404,8 +4404,6 @@ a.list-group-item.active > .badge,
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857143;
-  display: inline-block;
-  text-align: center;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -4416,8 +4414,6 @@ a.list-group-item.active > .badge,
 .thumbnail a > img {
   margin-right: auto;
   margin-left: auto;
-  display: inline-block;
-  float: none;
 
 }
 a.thumbnail:hover,
