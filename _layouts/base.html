@@ -55,6 +55,7 @@
         <nav id="navigation">
         
             <a href="/" class="home">Home</a>
+             {% if site.inc.blog_link %}<a href="{{ site.inc.blog_link }}">Blog</a>{% endif %}
             {% if site.inc.github_link %}<a href="{{ site.inc.github_link }}">Github</a>{% endif %}
             {% if site.inc.about_link %}<a href="{{ site.inc.about_link }}">About</a>{% endif %}
             {% if site.inc.contact_link %}<a href="{{ site.inc.contact_link }}">Contact</a>{% endif %}
