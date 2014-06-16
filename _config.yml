@@ -14,7 +14,6 @@ inc:
   about_link:   https://hilarybarr.github.io
   github_link:  http://github.com/hilarybarr
   contact_link: http://hilarybarr.github.io/contact/index.html
-  blog_link:     http://hilarybarr.github.io/blog/index.html
   
   
   # Comments
@@ -59,8 +58,8 @@ highlighter:  true
 relative_permalinks: true
 
 permalink:     pretty
-paginate_path: "blog/index.html/page:num"
-paginate: 100
+paginate_path: "page:num"
+paginate: 5
 
 markdown:      kramdown
 markdown_ext:  markdown,mkd,mkdn,md
