@@ -4402,12 +4402,11 @@ a.list-group-item.active > .badge,
 .thumbnail {
   display: block;
   padding: 4px;
-  margin-bottom: 20px;
+ margin: 0px auto;
   line-height: 1.42857143;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  text-align:center;
   -webkit-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out;
 }
