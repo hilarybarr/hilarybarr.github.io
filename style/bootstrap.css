@@ -4403,6 +4403,7 @@ a.list-group-item.active > .badge,
   display: block;
   padding: 4px;
   margin-bottom: 20px;
+  text-align: center;
   line-height: 1.42857143;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -4414,11 +4415,13 @@ a.list-group-item.active > .badge,
 .thumbnail a > img {
   margin-right: auto;
   margin-left: auto;
+  text-align: center;
 }
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
   border-color: #428bca;
+  text-align: center;
 }
 .thumbnail .caption {
   padding: 9px;
