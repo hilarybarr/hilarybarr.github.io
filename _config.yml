@@ -60,7 +60,7 @@ relative_permalinks: true
 
 permalink:     pretty
 paginate_path: "blog/page:num"
-paginate: 5
+paginate: 100
 
 markdown:      kramdown
 markdown_ext:  markdown,mkd,mkdn,md
